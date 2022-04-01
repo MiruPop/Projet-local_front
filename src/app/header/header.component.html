@@ -1,0 +1,94 @@
+<!-- Upper Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white py-0 fs-5">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+
+        <!-- Navbar brand -->
+        <a class="navbar-brand" style="height: 100px;" href="#">
+            <img src="assets/images/local_logo.jpg" class="h-100" alt="" loading="lazy" />
+        </a>
+
+        <!-- Hamburger toggle button -->
+        <button class="navbar-toggler" type="button" (click)="basicNavbar.toggle()" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" mdbCollapse #basicNavbar="mdbCollapse">
+            
+            <!-- Left links -->
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a routerLink="home" routerLinkActive="active" class="nav-link" aria-current="page">Boutique en ligne</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="about" routerLinkActive="active" class="nav-link">Qui sommes nous ?</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="events" routerLinkActive="active" class="nav-link">Evenèments</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="visitOurShop" routerLinkActive="active" class="nav-link">Le magasin</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="contact" routerLinkActive="active" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Lower Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white py-0">
+    <div class="container-fluid">
+        <ul class="navbar-nav d-flex flex-row ms-auto">
+
+            <!-- Simple icons -->
+            <li class="nav-item me-3 me-lg-2">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-shopping-cart" style="color:black"></i>
+                </a>
+            </li>
+
+            <!-- Dropdown user -->
+            <li mdbDropdown class="nav-item dropdown me-3 me-lg-2">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" mdbDropdownToggle
+                    aria-expanded="false">
+                    <i class="fas fa-user" style="color:black"></i>
+                </a>
+                <ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li>
+                        <a class="dropdown-item" href="#">Inscription</a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Connexion</a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Dropdown flag -->
+            <li mdbDropdown class="nav-item dropdown me-3 me-lg-2">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" mdbDropdownToggle
+                    aria-expanded="false">
+                    <i class="france flag m-0"></i>
+                </a>
+                <ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li>
+                        <a class="dropdown-item" href="#"><i class="france flag"></i>Français<i
+                                class="fa fa-check text-success ms-2"></i></a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#"><i class="united kingdom flag"></i>English</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
