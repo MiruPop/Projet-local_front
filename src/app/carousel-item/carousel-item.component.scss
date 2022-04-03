@@ -1,0 +1,21 @@
+.carousel-image {
+    display: block;
+    width: 100vw;
+    object-fit: cover;
+}
+
+@media (min-width: 1140px) {
+    .responsive-text {
+        font-size: 24px;
+    }
+}
+@media (max-width: 1139.98px) {
+    .responsive-text {
+        font-size: 20px;
+    }
+}
+@media (max-width: 950px) {
+    .responsive-text {
+        font-size: 18px;
+    }
+}

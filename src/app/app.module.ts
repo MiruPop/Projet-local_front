@@ -33,6 +33,9 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { EventsPageComponent } from './events-page/events-page.component';
 import { ShopPageComponent } from './shop-page/shop-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
+import { ArtistCardComponent } from './artist-card/artist-card.component';
+import { ModalComponent } from './modal/modal.component';
+import { PresentationPageComponent } from './presentation-page/presentation-page.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +50,10 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
     LandingPageComponent,
     EventsPageComponent,
     ShopPageComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    ArtistCardComponent,
+    ModalComponent,
+    PresentationPageComponent
   ],
   imports: [
     AppRoutingModule,
