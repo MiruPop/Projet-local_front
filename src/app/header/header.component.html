@@ -42,20 +42,19 @@
 
         <!-- Dropdown user -->
         <li mdbDropdown class="nav-item dropdown ms-2">
-            <a class="nav-link dropdown-toggle link-dark" href="#" id="navbarDropdownMenuLink" role="button" mdbDropdownToggle
+            <a class="nav-link dropdown-toggle link-dark" id="navbarDropdownMenuLink" role="button" mdbDropdownToggle
                 aria-expanded="false">
                 <i class="fas fa-user fa-lg" style="color:black"></i>
             </a>
             <ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li>
-                    <a class="dropdown-item" href="">Connexion</a>
-                    <!-- (click)="openModal()" -->
+                    <a class="dropdown-item" (click)="openModal()">Connexion</a>
                 </li>
                 <li>
                     <hr class="dropdown-divider" />
                 </li>
                 <li>
-                    <a class="dropdown-item" href="#">Inscription</a>
+                    <a class="dropdown-item" (click)="openModal()">Inscription</a>
                 </li>
             </ul>
         </li>
@@ -64,7 +63,7 @@
         <ul class="navbar-nav mx-2">
             <!-- Icon dropdown -->
             <li mdbDropdown class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle link-dark" href="#" id="navbarDropdown" role="button" mdbDropdownToggle
+                <a class="nav-link dropdown-toggle link-dark" id="navbarDropdown" role="button" mdbDropdownToggle
                     aria-expanded="false">
                     <span class="iconify" style="margin-bottom: 4px;" data-icon="circle-flags:fr" data-width="22"></span>
                 </a>
