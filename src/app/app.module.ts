@@ -36,6 +36,8 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
 import { ArtistCardComponent } from './artist-card/artist-card.component';
 import { ModalComponent } from './modal/modal.component';
 import { PresentationPageComponent } from './presentation-page/presentation-page.component';
+import { SingleProductComponent } from './single-product/single-product.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +55,9 @@ import { PresentationPageComponent } from './presentation-page/presentation-page
     ContactPageComponent,
     ArtistCardComponent,
     ModalComponent,
-    PresentationPageComponent
+    PresentationPageComponent,
+    SingleProductComponent,
+    ShoppingCartComponent
   ],
   imports: [
     AppRoutingModule,
