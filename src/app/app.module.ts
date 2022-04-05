@@ -38,6 +38,9 @@ import { ModalComponent } from './modal/modal.component';
 import { PresentationPageComponent } from './presentation-page/presentation-page.component';
 import { SingleProductComponent } from './single-product/single-product.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { ArtistCaptionComponent } from './artist-caption/artist-caption.component';
+import { FactureMailComponent } from './facture-mail/facture-mail.component';
+import { PaymentModalComponent } from './payment-modal/payment-modal.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +60,10 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     ModalComponent,
     PresentationPageComponent,
     SingleProductComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    ArtistCaptionComponent,
+    FactureMailComponent,
+    PaymentModalComponent
   ],
   imports: [
     AppRoutingModule,

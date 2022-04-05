@@ -9,6 +9,9 @@ import { MdbModalRef } from 'mdb-angular-ui-kit/modal';
 export class ModalComponent implements OnInit {
 
   title: string | null = null;
+  buttonAction: string | null = null;
+  bottomText: string | null = null;
+  choiceText: string | null = null;
   
   constructor(public modalRef: MdbModalRef<ModalComponent>) {}
 
