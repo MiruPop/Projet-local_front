@@ -17,7 +17,11 @@ export class HeaderComponent implements OnInit {
 
   openModal() {
     this.modalRef = this.modalService.open(ModalComponent, {
-      data: { title: 'Custom title' },
+      data: { title: 'Custom title',
+      buttonAction:'Custom buttonAction',
+      bottomText:'custom text',
+      choiceText:'change action' },
+      modalClass: 'modal-dialog-centered'
     });
     this.modalRef.onClose.subscribe((message: any) => {
       console.log(message);
