@@ -1,4 +1,7 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import * as fr from '@angular/common/locales/fr';
+
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -41,6 +44,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ArtistCaptionComponent } from './artist-caption/artist-caption.component';
 import { FactureMailComponent } from './facture-mail/facture-mail.component';
 import { PaymentModalComponent } from './payment-modal/payment-modal.component';
+
 
 @NgModule({
   declarations: [
@@ -85,7 +89,11 @@ import { PaymentModalComponent } from './payment-modal/payment-modal.component';
     MdbTooltipModule,
     MdbValidationModule,
   ],
-  providers: [],
+  providers: [{provide: LOCALE_ID, useValue: 'fr-FR'}],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor() {
+    registerLocaleData(fr.default);
+  }
+}

@@ -1,11 +1,11 @@
-<div class="card m-2" style="max-width: 18rem;">
-    <img src="/assets/images/elodie2.jpg" class="card-img-top" alt="..." />
+<div class="card m-4" style="max-width: 18rem;">
+    <a  routerLink="/product/{{id}}"><img [src]="product.imageURL" class="card-img-top" alt="product image : {{ product.title }}"/></a>
     <div class="card-body">
-        <h4 class="card-title">Cadre Jade</h4>
+        <h4 class="card-title">{{ product.title }}</h4>
         <p class="card-text">
-            d’après un collage original
+            {{ product.subtitle }}
         </p>
-        <p class="card-text text-muted">25,00 eur</p>
-        <button type="button" class="btn btn-dark">Acheter</button>
+        <p class="card-text text-muted">{{ product.price | currency: 'EUR'}} </p>
+        <button type="button" class="btn" [ngClass]="[buttonText === 'Produit acheté' ? 'btn-light' : 'btn-dark']" (click)="onBuyProduct()">{{ buttonText }}</button>
     </div>
 </div>
