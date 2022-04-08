@@ -10,7 +10,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { SingleProductComponent } from './single-product/single-product.component';
 
 const routes: Routes = [
-  { path: 'product/:{id}', component: SingleProductComponent},
+  { path: 'product/:id', component: SingleProductComponent},
   { path: 'home', component: LandingPageComponent },
   { path: 'about', component: AboutComponent},
   { path: 'artist', component: PresentationPageComponent},

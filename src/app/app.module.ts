@@ -44,6 +44,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ArtistCaptionComponent } from './artist-caption/artist-caption.component';
 import { FactureMailComponent } from './facture-mail/facture-mail.component';
 import { PaymentModalComponent } from './payment-modal/payment-modal.component';
+import { ProductListComponent } from './product-list/product-list.component';
 
 
 @NgModule({
@@ -67,7 +68,8 @@ import { PaymentModalComponent } from './payment-modal/payment-modal.component';
     ShoppingCartComponent,
     ArtistCaptionComponent,
     FactureMailComponent,
-    PaymentModalComponent
+    PaymentModalComponent,
+    ProductListComponent
   ],
   imports: [
     AppRoutingModule,

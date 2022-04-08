@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Product } from '../models/product.model';
+import { ProductsService } from '../services/products.service';
 
 @Component({
   selector: 'app-product-card',
@@ -22,22 +24,24 @@ export class ProductCardComponent implements OnInit {
 
   buttonText: string;
 
+  constructor(private productsService: ProductsService, private router: Router) { }
+
   ngOnInit(): void {
-    this.id = 1;
-    this.title = "Jade";
-    this.subtitle = "Cadre, 30x40 cm"
-    this.description = "Realisé d’après une création de collage originale. Imprimé sur papier fine art william Turner en série limitée";
-    this.category = "Décoration";
-    this.artist = "Malodepaname";
-    this.price = 60.0;
-    this.quantity = 5;
-    this.imageURL = "/assets/images/elodie2.jpg";
-    this.buttonText = "ACHETER"
   }
 
   onBuyProduct() {
     alert("produit ajouté au panier");
     this.buttonText = "Produit acheté"
-    this.quantity --;
+    this.quantity--;
+  }
+
+  onSelectProduct() {
+    const productId = this.productsService.getProductById(this.product.id);
+    //   if (!product) {
+    //     throw new Error('Produit introuvable!');
+    // } else {
+    //     return product;
+    // }
+    this.router.navigateByUrl(`product/${this.product.id}`);
   }
 }
