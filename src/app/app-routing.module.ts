@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { ArtistCaptionComponent } from './artist-caption/artist-caption.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { EventsPageComponent } from './events-page/events-page.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
@@ -18,11 +19,12 @@ const routes: Routes = [
   { path: 'visitOurShop', component: ShopPageComponent },
   { path: 'contact', component: ContactPageComponent },
   { path: 'cart', component: ShoppingCartComponent },
+  { path: 'caption', component: ArtistCaptionComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

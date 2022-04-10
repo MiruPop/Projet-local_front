@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from '../models/product.model';
 import { ProductsService } from '../services/products.service';
 
@@ -24,24 +24,25 @@ export class ProductCardComponent implements OnInit {
 
   buttonText: string;
 
-  constructor(private productsService: ProductsService, private router: Router) { }
+  constructor(private productsService: ProductsService) { }
 
   ngOnInit(): void {
+    this.buttonText = 'Acheter';
   }
 
   onBuyProduct() {
+    this.buttonText = "Produit acheté";
     alert("produit ajouté au panier");
-    this.buttonText = "Produit acheté"
     this.quantity--;
   }
 
-  onSelectProduct() {
-    const productId = this.productsService.getProductById(this.product.id);
-    //   if (!product) {
-    //     throw new Error('Produit introuvable!');
-    // } else {
-    //     return product;
-    // }
-    this.router.navigateByUrl(`product/${this.product.id}`);
-  }
+  // onSelectProduct() {
+  //   const productId = this.productsService.getProductById(this.product.id);
+  //   if (!product) {
+  //     throw new Error('Produit introuvable!');
+  // } else {
+  //     return product;
+  // }
+  //   this.router.navigateByUrl(`product/${this.product.id}`);
+  // }
 }

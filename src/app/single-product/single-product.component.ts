@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 import { Product } from '../models/product.model';
 import { ProductsService } from '../services/products.service';
 
@@ -10,11 +11,34 @@ import { ProductsService } from '../services/products.service';
 })
 export class SingleProductComponent implements OnInit {
 
-  product: Product;
+  // @Input() product: Product;
+  product : Product;
 
-  constructor(private productsService:ProductsService, private route:ActivatedRoute) { }
+  constructor(
+    private productsService:ProductsService,
+    private route:ActivatedRoute,
+    private location:Location) { }
 
   ngOnInit(): void {
+    this.getProduct();
   }
 
+  getProduct() :void {
+    const productId = +this.route.snapshot.params['id'];
+    // const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.productsService.getProductById(productId)
+    .subscribe(product => this.product=product);
+  }
+
+  goBack():void {
+    this.location.back();
+  }
+
+  isBetween(value:number) : boolean {
+    if(value > 0 && value <= 3) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }

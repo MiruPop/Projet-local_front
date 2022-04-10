@@ -1,16 +1,10 @@
 <div class="container-fluid d-flex flex-row justify-content-start">
-<!-- <div [ngClass]="container d-flex flex-row"> -->
-<!-- d-flex flex-column align-items-center justify-content-start flex-md-row flex-sm-wrap px-5"> -->
     <app-artist-card></app-artist-card>
-    <!-- <app-product-card  *ngFor="let product of products" [product]="product"></app-product-card> -->
-    <!-- traduction: "let element of array" [variable]="element" -->
-
-    <!-- EN AJOUTANT LE "PRODUCT-LIST? ça a cassé le bouton..." -->
     <app-product-list class="d-flex flex-row align-items-center justify-content-start flex-md-row flex-sm-wrap px-5"></app-product-list>
 </div>
 
 <div class="d-flex justify-content-end me-5">
-    <button type="button" class="btn btn-rounded my-3">
+    <button type="button" class="btn btn-rounded my-3" routerLink="../artist">
         Voir +
     </button>
 </div>

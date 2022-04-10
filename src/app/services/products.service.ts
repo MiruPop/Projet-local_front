@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { Observable, of } from "rxjs";
 import { Product } from "../models/product.model";
 
 @Injectable({
@@ -15,7 +16,7 @@ import { Product } from "../models/product.model";
           category : "Décoration",
           artist : "Malodepaname",
           price : 35.0,
-          quantity : 5,
+          quantity : 3,
           imageURL : "https://i.etsystatic.com/7711299/r/il/62362a/2903864812/il_794xN.2903864812_1zsg.jpg"
         },
         {
@@ -57,7 +58,8 @@ import { Product } from "../models/product.model";
           return this.products;
       }
 
-      getProductById(id:number) :Product {
-          return this.products.find(product => product.id === id);
+      getProductById(id:number) :Observable<Product> {
+        const product = this.products.find(product => product.id === id);
+          return of(product);
       }
   }
