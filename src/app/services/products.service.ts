@@ -14,10 +14,10 @@ import { Product } from "../models/product.model";
           subtitle : "Cadre, 30x40 cm",
           description : "Realisé d’après une création de collage originale. Imprimé sur papier fine art william Turner en série limitée",
           category : "Décoration",
-          artist : "Malodepaname",
+          artist : 1,
           price : 35.0,
           quantity : 3,
-          imageURL : "https://i.etsystatic.com/7711299/r/il/62362a/2903864812/il_794xN.2903864812_1zsg.jpg"
+          imageURL : "https://i.postimg.cc/fbZ6PP0g/malo2.jpg",
         },
         {
           id : 2,
@@ -25,10 +25,10 @@ import { Product } from "../models/product.model";
           subtitle : "Badge, 56 mm",
           description : "Realisé d’après une création de collage originale.",
           category : "Bijoux",
-          artist : "Malodepaname",
+          artist : 1,
           price : 4.0,
           quantity : 10,
-          imageURL : "https://i.etsystatic.com/7711299/r/il/2197af/1365403972/il_794xN.1365403972_3nxu.jpg"
+          imageURL : "https://i.postimg.cc/RZwkXmqH/malo3.jpg"
         },
         {
           id : 3,
@@ -36,23 +36,57 @@ import { Product } from "../models/product.model";
           subtitle : "Housse de coussin, 45x45 cm",
           description : "Realisé d’après une création de collage originale. Imprimé sur cotton 100%.",
           category : "Décoration",
-          artist : "Malodepaname",
+          artist : 1,
           price : 35.0,
           quantity : 10,
-          imageURL : "https://i.etsystatic.com/7711299/r/il/4eec08/2206354387/il_794xN.2206354387_ifkv.jpg"
+          imageURL : "https://i.postimg.cc/RFpyNVpj/malo4.jpg"
+        },
+        // {
+        //   id : 4,
+        //   title : "Angèle",
+        //   subtitle : "Trousse, 21x14 cm",
+        //   description : "Realisé d’après une création de collage originale. Imprimé sur cotton 100%.",
+        //   category : "Divers",
+        //   artist : 1,
+        //   price : 19.0,
+        //   quantity : 8,
+        //   imageURL : "https://i.etsystatic.com/7711299/r/il/b79d0e/3385153005/il_794xN.3385153005_6qao.jpg"
+        // },
+        {
+          id : 5,
+          title : "Rouages",
+          subtitle : "T-shirt, taille unique",
+          description : "Sérigraphie sur textile, réalisé manuellement. Série limitée. Support cotton 100%",
+          category : "Vêtements",
+          artist : 2,
+          price : 40.0,
+          quantity : 10,
+          imageURL : "https://i.postimg.cc/52WGHrpN/Unica1.jpg"
         },
         {
-          id : 4,
-          title : "Angèle",
-          subtitle : "Trousse, 21x14 cm",
-          description : "Realisé d’après une création de collage originale. Imprimé sur cotton 100%.",
-          category : "Divers",
-          artist : "Malodepaname",
-          price : 19.0,
-          quantity : 8,
-          imageURL : "https://i.etsystatic.com/7711299/r/il/b79d0e/3385153005/il_794xN.3385153005_6qao.jpg"
+          id : 6,
+          title : "Plantes en poche",
+          subtitle : "Support vertical pour plantes",
+          description : "Sérigraphie sur bâche, réalisé manuellement. Série limitée. Support bâche PVC de récupération",
+          category : "Décoration",
+          artist : 2,
+          price : 70.0,
+          quantity : 15,
+          imageURL : "https://i.postimg.cc/BvqVp1dr/unica3.jpg"
+        },
+        {
+          id : 7,
+          title : "Scream",
+          subtitle : "T-shirt, taille unique",
+          description : "Sérigraphie sur textile, réalisé manuellement. Série limitée. Support cotton 100%",
+          category : "Vêtements",
+          artist : 2,
+          price : 40.0,
+          quantity : 10,
+          imageURL : "https://i.postimg.cc/Jz3FjQd3/Unica2.jpg"
         }
       ];
+      
 
       getAllProducts(): Product[] {
           return this.products;

@@ -35,14 +35,4 @@ export class ProductCardComponent implements OnInit {
     alert("produit ajouté au panier");
     this.quantity--;
   }
-
-  // onSelectProduct() {
-  //   const productId = this.productsService.getProductById(this.product.id);
-  //   if (!product) {
-  //     throw new Error('Produit introuvable!');
-  // } else {
-  //     return product;
-  // }
-  //   this.router.navigateByUrl(`product/${this.product.id}`);
-  // }
 }

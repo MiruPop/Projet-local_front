@@ -12,9 +12,10 @@ import { SingleProductComponent } from './single-product/single-product.componen
 
 const routes: Routes = [
   { path: 'product/:id', component: SingleProductComponent},
+  { path: 'artist/:id', component: PresentationPageComponent},
+  { path: 'artist', component: PresentationPageComponent},
   { path: 'home', component: LandingPageComponent },
   { path: 'about', component: AboutComponent},
-  { path: 'artist', component: PresentationPageComponent},
   { path: 'events', component: EventsPageComponent },
   { path: 'visitOurShop', component: ShopPageComponent },
   { path: 'contact', component: ContactPageComponent },

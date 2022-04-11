@@ -45,6 +45,7 @@ import { ArtistCaptionComponent } from './artist-caption/artist-caption.componen
 import { FactureMailComponent } from './facture-mail/facture-mail.component';
 import { PaymentModalComponent } from './payment-modal/payment-modal.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { ArtistListComponent } from './artist-list/artist-list.component';
 
 
 @NgModule({
@@ -69,7 +70,8 @@ import { ProductListComponent } from './product-list/product-list.component';
     ArtistCaptionComponent,
     FactureMailComponent,
     PaymentModalComponent,
-    ProductListComponent
+    ProductListComponent,
+    ArtistListComponent
   ],
   imports: [
     AppRoutingModule,

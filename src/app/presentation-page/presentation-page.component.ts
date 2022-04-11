@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Artist } from '../models/artist.model';
 import { Product } from '../models/product.model';
+import { ArtistsService } from '../services/artists.service';
 
 @Component({
   selector: 'app-presentation-page',
@@ -9,10 +11,10 @@ import { Product } from '../models/product.model';
 export class PresentationPageComponent implements OnInit {
 
   products: Product[];
+  // @Input() artist: Artist;
   
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
