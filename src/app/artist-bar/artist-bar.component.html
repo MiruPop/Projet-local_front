@@ -1,6 +1,7 @@
-<div class="container-fluid d-flex flex-row justify-content-start">
-    <app-artist-card></app-artist-card>
-    <app-product-list class="d-flex flex-row align-items-center justify-content-start flex-md-row flex-sm-wrap px-5"></app-product-list>
+<div class="container-fluid d-flex flex-row justify-content-around flex-wrap">
+    <app-artist-card class="d-flex align-items-center"></app-artist-card>
+    <!-- <app-product-list *ngFor="let product of sampleProducts" class="d-flex flex-row align-items-center justify-content-start flex-md-row flex-sm-wrap px-5"></app-product-list> -->
+    <app-product-card *ngFor="let product of sampleProducts" [product]="product"></app-product-card>
 </div>
 
 <div class="d-flex justify-content-end me-5">

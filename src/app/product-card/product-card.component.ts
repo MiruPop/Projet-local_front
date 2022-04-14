@@ -12,15 +12,15 @@ export class ProductCardComponent implements OnInit {
 
   @Input() product: Product;
 
-  id: number;
-  title: string;
-  subtitle: string;
-  description: string;
-  category: string;
-  artist: string;
-  price: number;
-  quantity: number;
-  imageURL: string;
+  // id: number;
+  // title: string;
+  // subtitle: string;
+  // description: string;
+  // category: string;
+  // artist: string;
+  // price: number;
+  // quantity: number;
+  // imageURL: string;
 
   buttonText: string;
 
@@ -33,6 +33,6 @@ export class ProductCardComponent implements OnInit {
   onBuyProduct() {
     this.buttonText = "Produit acheté";
     alert("produit ajouté au panier");
-    this.quantity--;
+    this.product.quantity--;
   }
 }

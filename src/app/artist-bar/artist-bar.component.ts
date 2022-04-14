@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../models/product.model';
+import { ProductsService } from '../services/products.service';
 
 @Component({
   selector: 'app-artist-bar',
@@ -8,11 +9,16 @@ import { Product } from '../models/product.model';
 })
 export class ArtistBarComponent implements OnInit {
 
-  products: Product[];
+  sampleProducts: Product[];
 
-  constructor() { }
+  constructor(private service : ProductsService) { }
 
   ngOnInit(): void {
+    this.getSampleProducts();
+  }
+
+  getSampleProducts() {
+    this.sampleProducts = this.service.getAllProducts().slice(0,3);
   }
 
 }
