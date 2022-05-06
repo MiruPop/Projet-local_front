@@ -24,28 +24,28 @@ import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderComponent } from './header/header.component';
-import { CarouselComponent } from './carousel/carousel.component';
-import { FooterComponent } from './footer/footer.component';
-import { ArtistBarComponent } from './artist-bar/artist-bar.component';
-import { ProductCardComponent } from './product-card/product-card.component';
-import { CarouselItemComponent } from './carousel-item/carousel-item.component';
-import { AboutComponent } from './about/about.component';
+import { HeaderComponent } from './components/header/header.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ArtistBarComponent } from './components/artist-bar/artist-bar.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
+import { AboutComponent } from './pages/about/about.component';
 import { AppRoutingModule } from './app-routing.module';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { EventsPageComponent } from './events-page/events-page.component';
-import { ShopPageComponent } from './shop-page/shop-page.component';
-import { ContactPageComponent } from './contact-page/contact-page.component';
-import { ArtistCardComponent } from './artist-card/artist-card.component';
-import { ModalComponent } from './modal/modal.component';
-import { PresentationPageComponent } from './presentation-page/presentation-page.component';
-import { SingleProductComponent } from './single-product/single-product.component';
-import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
-import { ArtistCaptionComponent } from './artist-caption/artist-caption.component';
+import { LandingPageComponent } from './pages/landing-page/landing-page.component';
+import { EventsPageComponent } from './pages/events-page/events-page.component';
+import { ShopPageComponent } from './pages/shop-page/shop-page.component';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { PresentationPageComponent } from './pages/presentation-page/presentation-page.component';
+import { SingleProductComponent } from './pages/single-product/single-product.component';
+import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 import { FactureMailComponent } from './facture-mail/facture-mail.component';
-import { PaymentModalComponent } from './payment-modal/payment-modal.component';
+import { PaymentModalComponent } from './components/payment-modal/payment-modal.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ArtistListComponent } from './artist-list/artist-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ArtistsService } from './services/artists.service';
+import { ProductsService } from './services/products.service';
 
 
 @NgModule({
@@ -56,18 +56,15 @@ import { ArtistListComponent } from './artist-list/artist-list.component';
     FooterComponent,
     ArtistBarComponent,
     ProductCardComponent,
-    CarouselItemComponent,
     AboutComponent,
     LandingPageComponent,
     EventsPageComponent,
     ShopPageComponent,
     ContactPageComponent,
-    ArtistCardComponent,
     ModalComponent,
     PresentationPageComponent,
     SingleProductComponent,
     ShoppingCartComponent,
-    ArtistCaptionComponent,
     FactureMailComponent,
     PaymentModalComponent,
     ProductListComponent,
@@ -76,6 +73,7 @@ import { ArtistListComponent } from './artist-list/artist-list.component';
   imports: [
     AppRoutingModule,
     BrowserModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MdbAccordionModule,
     MdbCarouselModule,
@@ -93,10 +91,13 @@ import { ArtistListComponent } from './artist-list/artist-list.component';
     MdbTooltipModule,
     MdbValidationModule,
   ],
-  providers: [{provide: LOCALE_ID, useValue: 'fr-FR'}],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'fr-FR' },
+    ProductsService,
+    ArtistsService],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
+export class AppModule {
   constructor() {
     registerLocaleData(fr.default);
   }

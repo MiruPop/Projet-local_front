@@ -1,11 +1,12 @@
 export class Product {
     id: number;
-    title: string;
-    subtitle: string;
-    description: string;
-    category: string;
-    artist: number;
-    price: number;
-    quantity: number;
-    imageURL: string;
+    libelle : string;
+    caracteristiques : string;
+    description : string;
+    imageUrl : string;
+    prixUnitaire : number;
+    quantiteStock : number;
+    dateCreation : Date;
+    derniereMaj : Date;
+
 }
